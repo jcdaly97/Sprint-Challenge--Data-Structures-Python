@@ -62,6 +62,12 @@ buffer.get()   # should return ['d', 'e', 'f']
 
 Navigate into the `names` directory. Here you will find two text files containing 10,000 names each, along with a program `names.py` that compares the two files and prints out duplicate name entries. Try running the code with `python3 names.py`. Be patient because it might take a while: approximately six seconds on my laptop. What is the runtime complexity of this code?
 
+"""
+the original code had a complexity of O(n^2)
+my next iteration had a worst case complexity of O(n^2) if no duplicates were present
+but since the duplicates were randomly distributed and the inner loop broke as soon as it saw a duplicate, my code ran significantly faster (about 5 times faster)
+
+"""
 Six seconds is an eternity so you've been tasked with speeding up the code. Can you get the runtime to under a second? Under one hundredth of a second?
 
 *You may not use the built in Python list, set, or dictionary in your solution for this problem.  However, you can and should use the provided `duplicates` list to return your solution.*
